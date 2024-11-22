@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Ospekers</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="animsition">
+
+    <div class="container">
+
+        <img src="images/logo.png" alt="">
+
+        <div class="form-container">
+
+            <div class="panel">
+
+                <div class="panel-item">
+
+                    <a href="register">
+                        <button class="button-link active">Daftar</button>
+                    </a>
+                    <a href="login">
+                        <button class="button-link">Masuk</button>
+                    </a>
+
+                </div>
+
+            </div>
+
+            
+            <form action="register" method="POST" class="tbl-form">
+
+                <input type="hidden" name="_token" value="pzlhve9kik5VzwwK9outCekRc6s1NBL6XLYkFAXa" autocomplete="off">
+                <h1 class="daftar">Daftar</h1>
+
+                <label for="">
+                    <input type="email" name="email" id="" class="input" value="">
+                    <span class="placeholder">Email</span>
+                                    </label>
+
+                <label for="">
+                    <input type="text" name="uname" id="" class="input" value="">
+                    <span class="placeholder">Nama</span>
+                                    </label>
+
+                <label for="">
+                    <input type="password" name="password" id="" class="input">
+                    <span class="placeholder">Password</span>
+                                    </label>
+
+                <input type="submit" value="Daftar" class="action-btn">
+            </form>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

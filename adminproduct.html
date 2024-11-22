@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ospek Malang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8">
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mained.css">
+    <script src="js/sekerip.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--===============================================================================================-->
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-1AopBxYsml-S9bqk"></script>
+        
+</head>
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+
+<body>
+    <div class="container">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="admin">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="tittle">Ospek Malang</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="tittle">Beranda</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/user">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="tittle">Pengguna</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/product">
+                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                    <span class="tittle">Produk</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/order">
+                    <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                    <span class="tittle">Pesanan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/categories">
+                    <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
+                    <span class="tittle">Kategori</span>
+                </a>
+            </li>
+            
+            <li>
+                <form id="logout-form" action="logout" method="POST" style="display: none;">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                </form>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="tittle">Keluar</span>
+                </a>
+            </li>
+            
+
+        </ul>
+    </div>
+
+</div>
+    <div class="main">
+        <div class="topbar">
+    <div class="user-profil">
+        <a href="user">
+            <button>
+                Lihat Website
+            </button>
+        </a>
+                    <img src="images/default-profile.jpg" alt="Default Image" style="max-width:50px; max-height:50px; border-radius:50%; object-fit:cover">
+            </div>
+</div>
+        
+        <div class="detail">
+            <div class="cardHeader mt-5">
+                <h2>Produk</h2>
+                <button class="link" onclick="openModal('modal-add')">Tambah Produk</button>
+            </div>
+
+            <div class="user" id="user">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Gambar</th>
+                            <th>Nama</th>
+                            <th>Deskripsi</th>
+                            <th>Harga</th>
+                            <th>Stok</th>
+                            <th>Kategori</th>
+                            <th class="aksi" colspan="3">Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                                                    <tr>
+                                    <td>
+                                        <img src="images/1731911077_673adda5ed16e.webp" alt="Product Image 1" style="width: 50px; height: 50px; object-fit: contain;">
+                                    </td>
+                                    <td>sepautu</td>
+                                    <td>kaos kaki tahan lama, ga badeg</td>
+                                    <td>Rp. 89.896</td>
+                                    <td>46</td>
+                                    <td>Baju</td>
+                                    <td>
+                                        <button class="aksi-button" onclick="openModal('modal-view-7')">Lihat</button>
+                                        <button class="aksi-button" onclick="openModal('modal-update-7')">Perbarui</button>
+                                        <form action="admin/product/7" class="delete-product" id="product-delete-" method="POST" style="display:inline;">
+                                            <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                            <input type="hidden" name="_method" value="DELETE">                                            <button class="aksi-button" type="submit">Hapus</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        <img src="images/1731898225_673aab71af10c.png" alt="Product Image 1" style="width: 50px; height: 50px; object-fit: contain;">
+                                    </td>
+                                    <td>Baju Ospek + Dasi</td>
+                                    <td>Baju Ospek + Dasi</td>
+                                    <td>Rp. 89.000</td>
+                                    <td>10</td>
+                                    <td>Baju</td>
+                                    <td>
+                                        <button class="aksi-button" onclick="openModal('modal-view-6')">Lihat</button>
+                                        <button class="aksi-button" onclick="openModal('modal-update-6')">Perbarui</button>
+                                        <form action="admin/product/6" class="delete-product" id="product-delete-" method="POST" style="display:inline;">
+                                            <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                            <input type="hidden" name="_method" value="DELETE">                                            <button class="aksi-button" type="submit">Hapus</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        <img src="images/1731898156_673aab2c80210.png" alt="Product Image 1" style="width: 50px; height: 50px; object-fit: contain;">
+                                    </td>
+                                    <td>Dasi</td>
+                                    <td>Dasi</td>
+                                    <td>Rp. 1.000.000</td>
+                                    <td>999</td>
+                                    <td>Lainnya</td>
+                                    <td>
+                                        <button class="aksi-button" onclick="openModal('modal-view-5')">Lihat</button>
+                                        <button class="aksi-button" onclick="openModal('modal-update-5')">Perbarui</button>
+                                        <form action="admin/product/5" class="delete-product" id="product-delete-" method="POST" style="display:inline;">
+                                            <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                            <input type="hidden" name="_method" value="DELETE">                                            <button class="aksi-button" type="submit">Hapus</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        <img src="images/1731898111_673aaaff08176.png" alt="Product Image 1" style="width: 50px; height: 50px; object-fit: contain;">
+                                    </td>
+                                    <td>Sabuk</td>
+                                    <td>Sabuk</td>
+                                    <td>Rp. 10.000</td>
+                                    <td>9</td>
+                                    <td>Lainnya</td>
+                                    <td>
+                                        <button class="aksi-button" onclick="openModal('modal-view-4')">Lihat</button>
+                                        <button class="aksi-button" onclick="openModal('modal-update-4')">Perbarui</button>
+                                        <form action="admin/product/4" class="delete-product" id="product-delete-" method="POST" style="display:inline;">
+                                            <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                            <input type="hidden" name="_method" value="DELETE">                                            <button class="aksi-button" type="submit">Hapus</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                                            <tr>
+                                    <td>
+                                        <img src="images/1731898061_673aaacd9d5e7.jpg" alt="Product Image 1" style="width: 50px; height: 50px; object-fit: contain;">
+                                    </td>
+                                    <td>Sepatu</td>
+                                    <td>Sepatu</td>
+                                    <td>Rp. 50.000</td>
+                                    <td>9</td>
+                                    <td>Sepatu</td>
+                                    <td>
+                                        <button class="aksi-button" onclick="openModal('modal-view-3')">Lihat</button>
+                                        <button class="aksi-button" onclick="openModal('modal-update-3')">Perbarui</button>
+                                        <form action="admin/product/3" class="delete-product" id="product-delete-" method="POST" style="display:inline;">
+                                            <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                            <input type="hidden" name="_method" value="DELETE">                                            <button class="aksi-button" type="submit">Hapus</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                                                        </tbody>
+                </table>
+
+                <!-- Pagination Kustom -->
+                                    <div class="pagination">
+                                                    <span class="page-item disabled">Sebelumnya</span>
+                        
+                                                    <a class="page-item active" href="admin/product?page=1">1</a>
+                                                    <a class="page-item " href="admin/product?page=2">2</a>
+                        
+                                                    <a class="page-item" href="admin/product?page=2">Berikutnya</a>
+                                            </div>
+                            </div>
+        </div>
+
+        <!-- Modal Tambah Produk -->
+        <div class="modal" id="modal-add" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closemodal()">&times;</button>
+                <h2>Tambah Produk</h2>
+
+                <div class="tab-menu">
+                    <button class="tab-button active" onclick="openTab(event, 'Informasi')">Informasi</button>
+                    <button class="tab-button" onclick="openTab(event, 'Images')">Gambar</button>
+                    <button class="tab-button" onclick="openTab(event, 'PriceStock')">Harga & Stok</button>
+                </div>
+
+                <form action="admin/product/create" method="POST" enctype="multipart/form-data" id="add-product">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <div id="Informasi" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" placeholder="Nama Produk" required>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <select name="category_id" required>
+                                                                            <option value="1">Baju</option>
+                                                                            <option value="2">Celana</option>
+                                                                            <option value="3">Sepatu</option>
+                                                                            <option value="4">Lainnya</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" placeholder="Masukan Deskripsi Produk" required></textarea>
+                    </div>
+
+                    <div id="Images" class="tab-content">
+                        <div class="image-container">
+                            <img id="customImgPreview1" class="custom-img-preview" src="" alt="Image 1">
+                            <img id="customImgPreview2" class="custom-img-preview" src="" alt="Image 2">
+                            <img id="customImgPreview3" class="custom-img-preview" src="" alt="Image 3">
+                        </div>
+                        <div class="input-row mt-4">
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="$('#customImage1').click();">Pilih Gambar 1</button>
+                                <input type="file" id="customImage1" name="image1" class="custom-image-input" onchange="productImage(1)" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="$('#customImage2').click();">Pilih Gambar 2</button>
+                                <input type="file" id="customImage2" name="image2" class="custom-image-input" onchange="productImage(2)" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="$('#customImage3').click();">Pilih Gambar 3</button>
+                                <input type="file" id="customImage3" name="image3" class="custom-image-input" onchange="productImage(3)" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="PriceStock" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" placeholder="Masukan Harga Barang" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" placeholder="Masukan Stok Barang" required>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+
+            <!-- Modal View -->
+        <div class="modal" id="modal-view-7" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-view-7')">&times;</button>
+                <h2>Detail Produk</h2>
+
+                <div class="tab-menu">
+                    <button class="tab-button active" onclick="openTab(event, 'Informasi-7')">Informasi</button>
+                    <button class="tab-button" onclick="openTab(event, 'Images-7')">Gambar</button>
+                    <button class="tab-button" onclick="openTab(event, 'PriceStock-7')">Harga & Stok</button>
+                </div>
+
+                <form>
+                    <div id="Informasi-7" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="sepautu" readonly>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <input type="text" name="category" value="Baju" readonly>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" readonly>kaos kaki tahan lama, ga badeg</textarea>
+                    </div>
+
+                    <div id="Images-7" class="tab-content">
+                        <div class="image-container">
+                            <img src="images/1731911077_673adda5ed16e.webp">
+                            <img src="images/1731911077_673adda5ed689.jpg" onclick="setMainImage('images/1731911077_673adda5ed689.jpg')">
+                            <img src="images/1731911077_673adda5ed986.jpg" onclick="setMainImage('images/1731911077_673adda5ed986.jpg')">
+                        </div>
+                    </div>
+
+                    <div id="PriceStock-7" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="89896" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="46" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Update -->
+        <div class="modal" id="modal-update-7" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-7')">&times;</button>
+                <h2>Perbarui Produk</h2>
+        
+                <form action="admin/product/update/7" method="POST" enctype="multipart/form-data" id="product-update-7">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">        
+                    <div class="tab-menu">
+                        <button type="button" class="tab-button active" onclick="openTab(event, 'Informasi-7')">Informasi</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'Images-7')">Gambar</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'PriceStock-7')">Harga & Stok</button>
+                    </div>
+        
+                    <div id="Informasi-7" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="sepautu" required>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <select name="category_id" required>
+                                                                            <option value="1" selected>Baju</option>
+                                                                            <option value="2" >Celana</option>
+                                                                            <option value="3" >Sepatu</option>
+                                                                            <option value="4" >Lainnya</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" required>kaos kaki tahan lama, ga badeg</textarea>
+                    </div>
+        
+                    <div id="Images-7" class="tab-content">
+                        <div class="image-container">
+                            <img id="customImgPreviewUpdate1-7" class="custom-img-preview" src="images/1731911077_673adda5ed16e.webp" alt="Image 1">
+                            <img id="customImgPreviewUpdate2-7" class="custom-img-preview" src="images/1731911077_673adda5ed689.jpg" alt="Image 2">
+                            <img id="customImgPreviewUpdate3-7" class="custom-img-preview" src="images/1731911077_673adda5ed986.jpg" alt="Image 3">
+                        </div>
+                        <div class="input-row mt-4">
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate1-7').click();">Pilih Gambar 1</button>
+                                <input type="file" id="customImageUpdate1-7" name="image1" class="custom-image-input" onchange="productImageUpdate(1, '7')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate2-7').click();">Pilih Gambar 2</button>
+                                <input type="file" id="customImageUpdate2-7" name="image2" class="custom-image-input" onchange="productImageUpdate(2, '7')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate3-7').click();">Pilih Gambar 3</button>
+                                <input type="file" id="customImageUpdate3-7" name="image3" class="custom-image-input" onchange="productImageUpdate(3, '7')" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="PriceStock-7" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="89896" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="46" required>
+                    </div>
+        
+                        <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+        
+
+            <!-- Modal View -->
+        <div class="modal" id="modal-view-6" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-view-6')">&times;</button>
+                <h2>Detail Produk</h2>
+
+                <div class="tab-menu">
+                    <button class="tab-button active" onclick="openTab(event, 'Informasi-6')">Informasi</button>
+                    <button class="tab-button" onclick="openTab(event, 'Images-6')">Gambar</button>
+                    <button class="tab-button" onclick="openTab(event, 'PriceStock-6')">Harga & Stok</button>
+                </div>
+
+                <form>
+                    <div id="Informasi-6" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Baju Ospek + Dasi" readonly>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <input type="text" name="category" value="Baju" readonly>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" readonly>Baju Ospek + Dasi</textarea>
+                    </div>
+
+                    <div id="Images-6" class="tab-content">
+                        <div class="image-container">
+                            <img src="images/1731898225_673aab71af10c.png">
+                            <img src="images/1731898225_673aab71af4b0.png" onclick="setMainImage('images/1731898225_673aab71af4b0.png')">
+                            <img src="images/1731898225_673aab71af7d6.png" onclick="setMainImage('images/1731898225_673aab71af7d6.png')">
+                        </div>
+                    </div>
+
+                    <div id="PriceStock-6" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="89000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="10" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Update -->
+        <div class="modal" id="modal-update-6" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-6')">&times;</button>
+                <h2>Perbarui Produk</h2>
+        
+                <form action="admin/product/update/6" method="POST" enctype="multipart/form-data" id="product-update-6">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">        
+                    <div class="tab-menu">
+                        <button type="button" class="tab-button active" onclick="openTab(event, 'Informasi-6')">Informasi</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'Images-6')">Gambar</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'PriceStock-6')">Harga & Stok</button>
+                    </div>
+        
+                    <div id="Informasi-6" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Baju Ospek + Dasi" required>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <select name="category_id" required>
+                                                                            <option value="1" selected>Baju</option>
+                                                                            <option value="2" >Celana</option>
+                                                                            <option value="3" >Sepatu</option>
+                                                                            <option value="4" >Lainnya</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" required>Baju Ospek + Dasi</textarea>
+                    </div>
+        
+                    <div id="Images-6" class="tab-content">
+                        <div class="image-container">
+                            <img id="customImgPreviewUpdate1-6" class="custom-img-preview" src="images/1731898225_673aab71af10c.png" alt="Image 1">
+                            <img id="customImgPreviewUpdate2-6" class="custom-img-preview" src="images/1731898225_673aab71af4b0.png" alt="Image 2">
+                            <img id="customImgPreviewUpdate3-6" class="custom-img-preview" src="images/1731898225_673aab71af7d6.png" alt="Image 3">
+                        </div>
+                        <div class="input-row mt-4">
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate1-6').click();">Pilih Gambar 1</button>
+                                <input type="file" id="customImageUpdate1-6" name="image1" class="custom-image-input" onchange="productImageUpdate(1, '6')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate2-6').click();">Pilih Gambar 2</button>
+                                <input type="file" id="customImageUpdate2-6" name="image2" class="custom-image-input" onchange="productImageUpdate(2, '6')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate3-6').click();">Pilih Gambar 3</button>
+                                <input type="file" id="customImageUpdate3-6" name="image3" class="custom-image-input" onchange="productImageUpdate(3, '6')" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="PriceStock-6" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="89000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="10" required>
+                    </div>
+        
+                        <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+        
+
+            <!-- Modal View -->
+        <div class="modal" id="modal-view-5" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-view-5')">&times;</button>
+                <h2>Detail Produk</h2>
+
+                <div class="tab-menu">
+                    <button class="tab-button active" onclick="openTab(event, 'Informasi-5')">Informasi</button>
+                    <button class="tab-button" onclick="openTab(event, 'Images-5')">Gambar</button>
+                    <button class="tab-button" onclick="openTab(event, 'PriceStock-5')">Harga & Stok</button>
+                </div>
+
+                <form>
+                    <div id="Informasi-5" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Dasi" readonly>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <input type="text" name="category" value="Lainnya" readonly>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" readonly>Dasi</textarea>
+                    </div>
+
+                    <div id="Images-5" class="tab-content">
+                        <div class="image-container">
+                            <img src="images/1731898156_673aab2c80210.png">
+                            <img src="images/1731898156_673aab2c805b6.png" onclick="setMainImage('images/1731898156_673aab2c805b6.png')">
+                            <img src="images/1731898156_673aab2c808a6.png" onclick="setMainImage('images/1731898156_673aab2c808a6.png')">
+                        </div>
+                    </div>
+
+                    <div id="PriceStock-5" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="1000000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="999" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Update -->
+        <div class="modal" id="modal-update-5" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-5')">&times;</button>
+                <h2>Perbarui Produk</h2>
+        
+                <form action="admin/product/update/5" method="POST" enctype="multipart/form-data" id="product-update-5">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">        
+                    <div class="tab-menu">
+                        <button type="button" class="tab-button active" onclick="openTab(event, 'Informasi-5')">Informasi</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'Images-5')">Gambar</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'PriceStock-5')">Harga & Stok</button>
+                    </div>
+        
+                    <div id="Informasi-5" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Dasi" required>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <select name="category_id" required>
+                                                                            <option value="1" >Baju</option>
+                                                                            <option value="2" >Celana</option>
+                                                                            <option value="3" >Sepatu</option>
+                                                                            <option value="4" selected>Lainnya</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" required>Dasi</textarea>
+                    </div>
+        
+                    <div id="Images-5" class="tab-content">
+                        <div class="image-container">
+                            <img id="customImgPreviewUpdate1-5" class="custom-img-preview" src="images/1731898156_673aab2c80210.png" alt="Image 1">
+                            <img id="customImgPreviewUpdate2-5" class="custom-img-preview" src="images/1731898156_673aab2c805b6.png" alt="Image 2">
+                            <img id="customImgPreviewUpdate3-5" class="custom-img-preview" src="images/1731898156_673aab2c808a6.png" alt="Image 3">
+                        </div>
+                        <div class="input-row mt-4">
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate1-5').click();">Pilih Gambar 1</button>
+                                <input type="file" id="customImageUpdate1-5" name="image1" class="custom-image-input" onchange="productImageUpdate(1, '5')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate2-5').click();">Pilih Gambar 2</button>
+                                <input type="file" id="customImageUpdate2-5" name="image2" class="custom-image-input" onchange="productImageUpdate(2, '5')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate3-5').click();">Pilih Gambar 3</button>
+                                <input type="file" id="customImageUpdate3-5" name="image3" class="custom-image-input" onchange="productImageUpdate(3, '5')" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="PriceStock-5" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="1000000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="999" required>
+                    </div>
+        
+                        <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+        
+
+            <!-- Modal View -->
+        <div class="modal" id="modal-view-4" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-view-4')">&times;</button>
+                <h2>Detail Produk</h2>
+
+                <div class="tab-menu">
+                    <button class="tab-button active" onclick="openTab(event, 'Informasi-4')">Informasi</button>
+                    <button class="tab-button" onclick="openTab(event, 'Images-4')">Gambar</button>
+                    <button class="tab-button" onclick="openTab(event, 'PriceStock-4')">Harga & Stok</button>
+                </div>
+
+                <form>
+                    <div id="Informasi-4" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Sabuk" readonly>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <input type="text" name="category" value="Lainnya" readonly>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" readonly>Sabuk</textarea>
+                    </div>
+
+                    <div id="Images-4" class="tab-content">
+                        <div class="image-container">
+                            <img src="images/1731898111_673aaaff08176.png">
+                            <img src="images/1731898111_673aaaff08540.png" onclick="setMainImage('images/1731898111_673aaaff08540.png')">
+                            <img src="images/1731898111_673aaaff088f2.png" onclick="setMainImage('images/1731898111_673aaaff088f2.png')">
+                        </div>
+                    </div>
+
+                    <div id="PriceStock-4" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="10000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="9" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Update -->
+        <div class="modal" id="modal-update-4" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-4')">&times;</button>
+                <h2>Perbarui Produk</h2>
+        
+                <form action="admin/product/update/4" method="POST" enctype="multipart/form-data" id="product-update-4">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">        
+                    <div class="tab-menu">
+                        <button type="button" class="tab-button active" onclick="openTab(event, 'Informasi-4')">Informasi</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'Images-4')">Gambar</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'PriceStock-4')">Harga & Stok</button>
+                    </div>
+        
+                    <div id="Informasi-4" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Sabuk" required>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <select name="category_id" required>
+                                                                            <option value="1" >Baju</option>
+                                                                            <option value="2" >Celana</option>
+                                                                            <option value="3" >Sepatu</option>
+                                                                            <option value="4" selected>Lainnya</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" required>Sabuk</textarea>
+                    </div>
+        
+                    <div id="Images-4" class="tab-content">
+                        <div class="image-container">
+                            <img id="customImgPreviewUpdate1-4" class="custom-img-preview" src="images/1731898111_673aaaff08176.png" alt="Image 1">
+                            <img id="customImgPreviewUpdate2-4" class="custom-img-preview" src="images/1731898111_673aaaff08540.png" alt="Image 2">
+                            <img id="customImgPreviewUpdate3-4" class="custom-img-preview" src="images/1731898111_673aaaff088f2.png" alt="Image 3">
+                        </div>
+                        <div class="input-row mt-4">
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate1-4').click();">Pilih Gambar 1</button>
+                                <input type="file" id="customImageUpdate1-4" name="image1" class="custom-image-input" onchange="productImageUpdate(1, '4')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate2-4').click();">Pilih Gambar 2</button>
+                                <input type="file" id="customImageUpdate2-4" name="image2" class="custom-image-input" onchange="productImageUpdate(2, '4')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate3-4').click();">Pilih Gambar 3</button>
+                                <input type="file" id="customImageUpdate3-4" name="image3" class="custom-image-input" onchange="productImageUpdate(3, '4')" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="PriceStock-4" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="10000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="9" required>
+                    </div>
+        
+                        <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+        
+
+            <!-- Modal View -->
+        <div class="modal" id="modal-view-3" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-view-3')">&times;</button>
+                <h2>Detail Produk</h2>
+
+                <div class="tab-menu">
+                    <button class="tab-button active" onclick="openTab(event, 'Informasi-3')">Informasi</button>
+                    <button class="tab-button" onclick="openTab(event, 'Images-3')">Gambar</button>
+                    <button class="tab-button" onclick="openTab(event, 'PriceStock-3')">Harga & Stok</button>
+                </div>
+
+                <form>
+                    <div id="Informasi-3" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Sepatu" readonly>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <input type="text" name="category" value="Sepatu" readonly>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" readonly>Sepatu</textarea>
+                    </div>
+
+                    <div id="Images-3" class="tab-content">
+                        <div class="image-container">
+                            <img src="images/1731898061_673aaacd9d5e7.jpg">
+                            <img src="images/1731898061_673aaacd9d9b4.png" onclick="setMainImage('images/1731898061_673aaacd9d9b4.png')">
+                            <img src="images/1731898061_673aaacd9dcda.png" onclick="setMainImage('images/1731898061_673aaacd9dcda.png')">
+                        </div>
+                    </div>
+
+                    <div id="PriceStock-3" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="50000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="9" required>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Modal Update -->
+        <div class="modal" id="modal-update-3" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-3')">&times;</button>
+                <h2>Perbarui Produk</h2>
+        
+                <form action="admin/product/update/3" method="POST" enctype="multipart/form-data" id="product-update-3">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">        
+                    <div class="tab-menu">
+                        <button type="button" class="tab-button active" onclick="openTab(event, 'Informasi-3')">Informasi</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'Images-3')">Gambar</button>
+                        <button type="button" class="tab-button" onclick="openTab(event, 'PriceStock-3')">Harga & Stok</button>
+                    </div>
+        
+                    <div id="Informasi-3" class="tab-content active">
+                        <div class="input-row">
+                            <div class="input-grup">
+                                <label for="name">Nama Produk:</label>
+                                <input type="text" name="name" value="Sepatu" required>
+                            </div>
+                            <div class="input-grup">
+                                <label for="category">Kategori:</label>
+                                <select name="category_id" required>
+                                                                            <option value="1" >Baju</option>
+                                                                            <option value="2" >Celana</option>
+                                                                            <option value="3" selected>Sepatu</option>
+                                                                            <option value="4" >Lainnya</option>
+                                                                    </select>
+                            </div>
+                        </div>
+                        <label for="descriptions">Deskripsi:</label>
+                        <textarea name="descriptions" required>Sepatu</textarea>
+                    </div>
+        
+                    <div id="Images-3" class="tab-content">
+                        <div class="image-container">
+                            <img id="customImgPreviewUpdate1-3" class="custom-img-preview" src="images/1731898061_673aaacd9d5e7.jpg" alt="Image 1">
+                            <img id="customImgPreviewUpdate2-3" class="custom-img-preview" src="images/1731898061_673aaacd9d9b4.png" alt="Image 2">
+                            <img id="customImgPreviewUpdate3-3" class="custom-img-preview" src="images/1731898061_673aaacd9dcda.png" alt="Image 3">
+                        </div>
+                        <div class="input-row mt-4">
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate1-3').click();">Pilih Gambar 1</button>
+                                <input type="file" id="customImageUpdate1-3" name="image1" class="custom-image-input" onchange="productImageUpdate(1, '3')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate2-3').click();">Pilih Gambar 2</button>
+                                <input type="file" id="customImageUpdate2-3" name="image2" class="custom-image-input" onchange="productImageUpdate(2, '3')" style="display: none;">
+                            </div>
+                            <div class="input-file">
+                                <button type="button" class="custom-file-button" onclick="document.getElementById('customImageUpdate3-3').click();">Pilih Gambar 3</button>
+                                <input type="file" id="customImageUpdate3-3" name="image3" class="custom-image-input" onchange="productImageUpdate(3, '3')" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div id="PriceStock-3" class="tab-content">
+                        <label for="price">Harga:</label>
+                        <input type="number" name="price" value="50000" required>
+                        <label for="stock">Stok:</label>
+                        <input type="number" name="stock" value="9" required>
+                    </div>
+        
+                        <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+        
+
+    <script src="js/admins.js"></script>
+<script>
+    function openModal() {
+    var modal = document.getElementById("modal-add");
+    modal.style.display = "block";
+}
+
+// Fungsi untuk menutup modal
+function closemodal() {
+    var modal = document.getElementById("modal-add");
+    modal.style.display = "none";
+}
+
+// Tutup modal saat pengguna klik di luar konten modal
+window.onclick = function (event) {
+    var modal = document.getElementById("modal-add");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+function openModal(modalId) {
+    var modal = document.getElementById(modalId);
+    modal.style.display = "block";
+}
+
+function closeModal(modalId) {
+    const modal = document.getElementById(modalId); 
+    const content = modal.querySelector(".modal-content");
+
+    // Tambahkan kelas animasi zoomOut
+    content.style.animation = "zoomOut 0.5s ease-in-out";
+
+    // Tunggu sampai animasi selesai sebelum menyembunyikan modal
+    setTimeout(() => {
+        modal.style.display = "none";
+        content.style.animation = "";
+    }, 500);
+}
+function openTab(evt, tabName) {
+    evt.preventDefault();
+    console.log("Tab opened:", tabName);
+
+    const modalContent = evt.target.closest(".modal-content");
+
+    const tabcontent = modalContent.getElementsByClassName("tab-content");
+    for (let i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].classList.remove("active");
+    }
+
+    const tabbuttons = modalContent.getElementsByClassName("tab-button");
+    for (let i = 0; i < tabbuttons.length; i++) {
+        tabbuttons[i].classList.remove("active");
+    }
+
+    const selectedTab = modalContent.querySelector(`#${tabName}`);
+    if (selectedTab) {
+        selectedTab.classList.add("active");
+    }
+    evt.currentTarget.classList.add("active");
+}
+
+</script>
+<!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function() {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/parallax100/parallax100.js"></script>
+    <script>
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script>
+        $('.gallery-lb').each(function() { // the containers for all your galleries
+            $(this).magnificPopup({
+                delegate: 'a', // the selector for gallery item
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script>
+        // Menangani klik pada tombol tambah ke wishlist
+        $('.js-addwish-b2').each(function() {
+            var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                swal(nameProduct, "is added to wishlist!", "success");
+                $(this).addClass('js-addedwish-b2');
+                $(this).off('click');
+            });
+        });
+    
+        // Menangani klik pada tombol tambah ke wishlist di detail produk
+        $('.js-addwish-detail').each(function() {
+            var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+            $(this).on('click', function() {
+                swal(nameProduct, "is added to wishlist!", "success");
+                $(this).addClass('js-addedwish-detail');
+                $(this).off('click');
+            });
+        });
+    
+        // Menangani klik pada tombol tambah ke keranjang
+        $('.js-addcart-detail').each(function() {
+            var nameProduct = $(this).closest('.product-list').find('.name-product').html();
+            $(this).on('click', function(e) {
+                e.preventDefault(); // Mencegah formulir dikirim langsung
+    
+                // Tampilkan SweetAlert
+                swal({
+                    title: nameProduct,
+                    text: "is added to cart!",
+                    icon: "success",
+                    button: "OK",
+                }).then(() => {
+                    // Kirim formulir setelah pengguna menekan tombol OK
+                    $(this).closest('form').submit();
+                });
+            });
+        });
+    </script>
+    
+    <!--===============================================================================================-->
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function() {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+
+            $(window).on('resize', function() {
+                ps.update();
+            })
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="js/sekerip.js"></script>
+</body>
+
+</html><script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+

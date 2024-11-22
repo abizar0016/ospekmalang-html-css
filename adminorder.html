@@ -1,0 +1,328 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ospek Malang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8">
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mained.css">
+    <script src="js/sekerip.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--===============================================================================================-->
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-1AopBxYsml-S9bqk"></script>
+        
+</head>
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+
+<body class="animation">
+
+    <div class="container">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="admin">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="tittle">Ospek Malang</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="tittle">Beranda</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/user">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="tittle">Pengguna</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/product">
+                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                    <span class="tittle">Produk</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/order">
+                    <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                    <span class="tittle">Pesanan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/categories">
+                    <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
+                    <span class="tittle">Kategori</span>
+                </a>
+            </li>
+            
+            <li>
+                <form id="logout-form" action="logout" method="POST" style="display: none;">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                </form>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="tittle">Keluar</span>
+                </a>
+            </li>
+            
+
+        </ul>
+    </div>
+
+</div>
+    <div class="main">
+        <div class="topbar">
+    <div class="user-profil">
+        <a href="user">
+            <button>
+                Lihat Website
+            </button>
+        </a>
+                    <img src="images/default-profile.jpg" alt="Default Image" style="max-width:50px; max-height:50px; border-radius:50%; object-fit:cover">
+            </div>
+</div>                <div class="detail">
+            <div class="cardHeader mt-5">
+                <h2>Pesanan</h2>
+            </div>
+            <div class="user" id="user">
+                <table>
+                    <thead>
+                        <tr>
+                        <th>Id</th>
+                        <th>Total</th>
+                        <th style="padding-right: 35rem">Status</th>
+                        <th class="aksi" colspan="3">Aksi</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                                                                            <tr>
+                                <td>8</td>
+                                <td>50000.00</td>
+                                <td>tertunda</td>
+                                <td>
+
+                                    <button onclick="openModal('modal-view-8')" class="aksi-button">
+                                        Lihat
+                                    </button>
+                                    <button onclick="openModal('modal-update-8')"
+                                        class="aksi-button">
+                                        Edit
+                                    </button>
+                                    <form id="order-delete-8"
+                                        action="admin/order/delete/8" method="POST"
+                                        style="display:inline;" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                        <input type="hidden" name="_method" value="DELETE">                                        <button type="button" class="aksi-button delete-order-button"
+                                            data-form-id="order-delete-8"
+                                            data-item-name="">
+                                            Hapus
+                                        </button>
+                                    </form>
+
+                                </td>
+
+                            </tr>
+                                                    <tr>
+                                <td>7</td>
+                                <td>10000.00</td>
+                                <td>tertunda</td>
+                                <td>
+
+                                    <button onclick="openModal('modal-view-7')" class="aksi-button">
+                                        Lihat
+                                    </button>
+                                    <button onclick="openModal('modal-update-7')"
+                                        class="aksi-button">
+                                        Edit
+                                    </button>
+                                    <form id="order-delete-7"
+                                        action="admin/order/delete/7" method="POST"
+                                        style="display:inline;" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                        <input type="hidden" name="_method" value="DELETE">                                        <button type="button" class="aksi-button delete-order-button"
+                                            data-form-id="order-delete-7"
+                                            data-item-name="">
+                                            Hapus
+                                        </button>
+                                    </form>
+
+                                </td>
+
+                            </tr>
+                                                    <tr>
+                                <td>6</td>
+                                <td>10000.00</td>
+                                <td>tertunda</td>
+                                <td>
+
+                                    <button onclick="openModal('modal-view-6')" class="aksi-button">
+                                        Lihat
+                                    </button>
+                                    <button onclick="openModal('modal-update-6')"
+                                        class="aksi-button">
+                                        Edit
+                                    </button>
+                                    <form id="order-delete-6"
+                                        action="admin/order/delete/6" method="POST"
+                                        style="display:inline;" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                        <input type="hidden" name="_method" value="DELETE">                                        <button type="button" class="aksi-button delete-order-button"
+                                            data-form-id="order-delete-6"
+                                            data-item-name="">
+                                            Hapus
+                                        </button>
+                                    </form>
+
+                                </td>
+
+                            </tr>
+                                                    <tr>
+                                <td>4</td>
+                                <td>56000.00</td>
+                                <td>tertunda</td>
+                                <td>
+
+                                    <button onclick="openModal('modal-view-4')" class="aksi-button">
+                                        Lihat
+                                    </button>
+                                    <button onclick="openModal('modal-update-4')"
+                                        class="aksi-button">
+                                        Edit
+                                    </button>
+                                    <form id="order-delete-4"
+                                        action="admin/order/delete/4" method="POST"
+                                        style="display:inline;" enctype="multipart/form-data">
+                                        <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                        <input type="hidden" name="_method" value="DELETE">                                        <button type="button" class="aksi-button delete-order-button"
+                                            data-form-id="order-delete-4"
+                                            data-item-name="">
+                                            Hapus
+                                        </button>
+                                    </form>
+
+                                </td>
+
+                            </tr>
+                                                                    </tbody>
+                </table>
+                            </div>
+        </div>
+    </div>
+            <!-- Modal for Viewing Order -->
+        <div class="modal" id="modal-view-10" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-view-10')">&times;</button>
+                <h2>Pesanan</h2>
+                <form>
+                    <label for="name">Nama Pembeli :</label>
+                    <input type="text" name="name" value="admin1234" readonly>
+                    
+                    <label for="name">Barang yang Dibeli :</label>
+                                                        <input type="text" name="product" value="Celana - 1 pcs" readonly>
+                                            
+                    <label for="name">Waktu Memesan :</label>
+                    <input type="text" name="name"
+                        value="Senin, 18 November 2024 06:04"
+                        readonly>
+                    <label for="name">Status Pesanan :</label>
+                    <input type="text" name="name" value="tertunda" readonly>
+                </form>
+            </div>
+        </div>
+        
+
+        <!-- Modal for Updating Order -->
+        <div class="modal" id="modal-update-10" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-10')">&times;</button>
+                <h2>Update Pesanan</h2>
+                <form action="admin/order/update/10" method="POST">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">
+                    <label for="order_status">Status Pesanan :</label>
+                    <select name="status" required>
+                        <option value="tertunda" >Tertunda
+                        </option>
+                        <option value="dikirim" >Dirkirim
+                        </option>
+                        <option value="dikerjakan" >
+                            Dikerjakan
+                        </option>
+                        <option value="dikembalikan" >
+                            Dikembalikan
+                        </option>
+                    </select>
+
+                    <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+    
+    <script>
+         // Fungsi untuk membuka modal
+         function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block'; // Menampilkan modal
+                document.body.style.overflow = 'hidden'; // Mencegah scroll di background
+            }
+        }
+
+        // Fungsi untuk menutup modal
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none'; // Menyembunyikan modal
+                document.body.style.overflow = 'auto'; // Mengembalikan scroll di background
+            }
+        }
+    </script>
+
+
+</body>
+
+<script src="js/admins.js"></script>
+<!------------------ ionicons ----------------------->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

@@ -1,0 +1,513 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ospek Malang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8">
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mained.css">
+    <script src="js/sekerip.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--===============================================================================================-->
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-1AopBxYsml-S9bqk"></script>
+        
+</head>
+<link rel="stylesheet" type="text/css" href="css/admin.css">
+
+<body>
+
+    <div class="container">
+    <div class="navigation">
+        <ul>
+            <li>
+                <a href="admin">
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></span>
+                    <span class="tittle">Ospek Malang</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin">
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="tittle">Beranda</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/user">
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="tittle">Pengguna</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/product">
+                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                    <span class="tittle">Produk</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/order">
+                    <span class="icon"><ion-icon name="cart-outline"></ion-icon></span>
+                    <span class="tittle">Pesanan</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="admin/categories">
+                    <span class="icon"><ion-icon name="albums-outline"></ion-icon></span>
+                    <span class="tittle">Kategori</span>
+                </a>
+            </li>
+            
+            <li>
+                <form id="logout-form" action="logout" method="POST" style="display: none;">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                </form>
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="tittle">Keluar</span>
+                </a>
+            </li>
+            
+
+        </ul>
+    </div>
+
+</div>
+    <div class="main">
+        <div class="topbar">
+    <div class="user-profil">
+        <a href="user">
+            <button>
+                Lihat Website
+            </button>
+        </a>
+                    <img src="images/default-profile.jpg" alt="Default Image" style="max-width:50px; max-height:50px; border-radius:50%; object-fit:cover">
+            </div>
+</div>        
+
+        <div class="detail">
+            <div class="cardHeader mt-5">
+                <h2>Akun Pengguna</h2>
+                <button class="link" onclick="openModal('modal-add')">Tambah Pengguna</button>
+            </div>
+            <div class="user" id="user">
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Profil</th>
+                            <th>Nama</th>
+                            <th>Email</th>
+                            <th>Nomor</th>
+                            <th>Kota</th>
+                            <th>Peran</th>
+                            <th class="aksi" colspan="3">aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                                                    <tr class="list">
+                                <td><img src="images/default-profile.jpg"
+                                        alt="" width="50px" height="50px"
+                                        style="border-radius: 50%; object-fit:cover;"></td>
+                                <td class="name-tbl">admin1234</td>
+                                <td class="email-tbl">admin@gmail.com</td>
+                                <td class="phone-tbl"></td>
+                                <td class="city-tbl">malang, wagir</td>
+                                <td>admin</td>
+                                <td>
+                                    <button onclick="openModal('modal-view-1')" title="Lihat Pengguna"
+                                        class="aksi-button">
+                                        Lihat
+                                    </button>
+                                    <button onclick="openModal('modal-update-1')"
+                                        title="Perbarui Pengguna" class="aksi-button">
+                                        Perbarui
+                                    </button>
+                                    <form action="admin/user/1" method="POST"
+                                        id="user-delete-1" style="display: inline;">
+                                        <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                        <input type="hidden" name="_method" value="DELETE">                                        <button class="aksi-button delete-user-button" type="button"
+                                            data-form-id="user-delete-1"
+                                            data-item-name="admin1234">
+                                            Hapus
+                                        </button>
+                                    </form>
+                                </td>
+
+                            </tr>
+                        
+                    </tbody>
+                </table>
+                            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal Tambah Pengguna -->
+    <div class="modal" id="modal-add" style="display: none;">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal('modal-add')">&times;</button>
+            <h2>Tambah Pengguna</h2>
+
+            <form action="admin/user/create" method="POST" id="user-add"
+                enctype="multipart/form-data">
+                <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                <!-- Tab Content -->
+                <div class="input-row">
+                    <div class="input-grup">
+                        <label>Gambar Profil :</label>
+                        <div class="image-profile edit-profile ml-3"
+                            onclick="document.getElementById('image').click();">
+                            <img class="img-preview" id="imgPreview" src="images/default-profile.jpg">
+                            <input type="file" id="image" name="image" class="image-preview"
+                                onchange="userImageAdd()" style="display: none;">
+                        </div>
+                    </div>
+                    <div class="input-grup">
+                        <label for="uname">Nama :</label>
+                        <input type="text" name="uname" required>
+
+                        <label for="email">Email :</label>
+                        <input type="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="input-row mt-1">
+                    <div class="input-grup">
+                        <label for="password">Password :</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="input-grup">
+                        <label for="phone">Telepon :</label>
+                        <input type="text" name="phone" required>
+                    </div>
+                </div>
+
+                <div class="input-row">
+                    <div class="input-grup">
+                        <label for="dob">Tanggal Lahir :</label>
+                        <input type="date" name="dob" required>
+                    </div>
+                    <div class="input-grup">
+                        <label for="city">Kota :</label>
+                        <input type="text" name="city" required>
+                    </div>
+                </div>
+
+                <label for="status">Status :</label>
+                <select name="status" required>
+                    <option value="admin">Admin</option>
+                    <option value="user">User</option>
+                </select>
+
+                <label for="bio">Bio :</label>
+                <textarea name="bio"></textarea>
+
+                <button type="submit" class="submit-btn">Kirim</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Lihat Pengguna -->
+            <div class="modal" id="modal-view-1" style="display: none;">
+
+            <div class="modal-content">
+
+                <button class="close-btn" onclick="closeModal('modal-view-1')">&times;</button>
+
+                <h2>Detail Pengguna</h2>
+
+                <!-- Tab Content -->
+                <div class="input-row">
+
+                    <div class="input-grup">
+
+                        <label>Gambar Profil :</label>
+
+                        <div class="image-profile">
+
+                            <img src="images/default-profile.jpg"
+                                alt="Profil Pengguna">
+
+                        </div>
+
+                    </div>
+
+                    <div class="input-grup">
+
+                        <label>Nama :</label>
+
+                        <input type="text" readonly value="admin1234">
+
+                        <label>Email :</label>
+
+                        <input type="email" readonly value="admin@gmail.com">
+
+                    </div>
+
+                </div>
+
+                <div class="input-row">
+
+                    <div class="input-grup">
+
+                        <label>Nomor Telepon :</label>
+
+                        <input type="text" readonly value="">
+
+                    </div>
+
+                    <div class="input-grup">
+
+                        <label>Kota :</label>
+
+                        <input type="text" readonly value="malang, wagir">
+
+                    </div>
+
+                </div>
+
+
+                <label>Status :</label>
+
+                <input type="text" readonly value="admin">
+
+                <label for="bio">Bio :</label>
+
+                <textarea name="bio" readonly>aku cinta ff</textarea>
+
+            </div>
+
+        </div>
+
+        <!-- Modal Update Pengguna -->
+        <div class="modal" id="modal-update-1" style="display: none;">
+            <div class="modal-content">
+                <button class="close-btn" onclick="closeModal('modal-update-1')">&times;</button>
+                <h2>Perbarui Pengguna</h2>
+
+                <!-- Tab Content -->
+                <form action="admin/user/update/1" id="user-update-1"
+                    method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                    <input type="hidden" name="_method" value="PUT">                    <div class="input-row">
+                        <div class="input-grup">
+                            <label>Gambar Profil :</label>
+                            <div class="image-profile edit-profile ml-3"
+                                onclick="document.getElementById('image-1').click();">
+                                <img src="images/default-profile.jpg"
+                                    alt="Profil Pengguna" id="imgPreview-1" class="img-preview">
+                            </div>
+                            <input type="file" id="image-1" name="image"
+                                class="image-preview" onchange="userImageUpdate('1')"
+                                style="display: none;">
+                        </div>
+                        <div class="input-grup">
+                            <label for="name">Nama :</label>
+                            <input type="text" name="uname" value="admin1234" required>
+                            <label for="email">Email :</label>
+                            <input type="email" name="email" value="admin@gmail.com" required>
+                        </div>
+                    </div>
+
+                    <div class="input-row">
+                        <div class="input-grup">
+                            <label>Nomor Telepon :</label>
+                            <input type="text" name="phone" value="">
+                        </div>
+                        <div class="input-grup">
+                            <label>Kota :</label>
+                            <input type="text" name="city" value="malang, wagir">
+                        </div>
+                    </div>
+
+
+                    <label for="role">Status :</label>
+                    <select name="status" required>
+                        <option value="admin" selected>Admin</option>
+                        <option value="user" >User</option>
+                    </select>
+
+                    <label for="bio">Bio :</label>
+                    <textarea name="bio">aku cinta ff</textarea>
+
+                    <button type="submit" class="submit-btn">Kirim</button>
+                </form>
+            </div>
+        </div>
+    
+    <script>
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'block';
+            } else {
+                console.error(`Modal with ID '${modalId}' not found.`);
+            }
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.style.display = 'none';
+            } else {
+                console.error(`Modal with ID '${modalId}' not found.`);
+            }
+        }
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function() {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/parallax100/parallax100.js"></script>
+    <script>
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script>
+        $('.gallery-lb').each(function() { // the containers for all your galleries
+            $(this).magnificPopup({
+                delegate: 'a', // the selector for gallery item
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script>
+        // Menangani klik pada tombol tambah ke wishlist
+        $('.js-addwish-b2').each(function() {
+            var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                swal(nameProduct, "is added to wishlist!", "success");
+                $(this).addClass('js-addedwish-b2');
+                $(this).off('click');
+            });
+        });
+    
+        // Menangani klik pada tombol tambah ke wishlist di detail produk
+        $('.js-addwish-detail').each(function() {
+            var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+            $(this).on('click', function() {
+                swal(nameProduct, "is added to wishlist!", "success");
+                $(this).addClass('js-addedwish-detail');
+                $(this).off('click');
+            });
+        });
+    
+        // Menangani klik pada tombol tambah ke keranjang
+        $('.js-addcart-detail').each(function() {
+            var nameProduct = $(this).closest('.product-list').find('.name-product').html();
+            $(this).on('click', function(e) {
+                e.preventDefault(); // Mencegah formulir dikirim langsung
+    
+                // Tampilkan SweetAlert
+                swal({
+                    title: nameProduct,
+                    text: "is added to cart!",
+                    icon: "success",
+                    button: "OK",
+                }).then(() => {
+                    // Kirim formulir setelah pengguna menekan tombol OK
+                    $(this).closest('form').submit();
+                });
+            });
+        });
+    </script>
+    
+    <!--===============================================================================================-->
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function() {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+
+            $(window).on('resize', function() {
+                ps.update();
+            })
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="js/sekerip.js"></script>
+</body>
+
+</html>
+    <script src="js/admins.js"></script>
+    <!------------------ ionicons ----------------------->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>

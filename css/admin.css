@@ -1,0 +1,637 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --blue: #2a2185;
+    --white: #fff;
+    --gray: #f5f5f5;
+    --black1: #333;
+    --black2: #999;
+}
+
+body {
+    height: 100vh;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+}
+
+.navigation {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #333; /* Mengubah warna latar belakang */
+    transition: width 0.3s, background 0.3s; /* Efek transisi halus */
+    overflow: hidden;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Tambahkan bayangan untuk kedalaman */
+}
+
+.navigation ul {
+    padding: 0;
+}
+
+.navigation ul li {
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-radius: 8px; /* Rounded corners untuk elemen */
+    margin: 10px 0; /* Jarak antar elemen */
+}
+
+.navigation ul li:hover {
+    background: rgba(255, 255, 255, 0.2); /* Efek hover lebih halus */
+}
+
+.navigation ul li a {
+    width: 100%;
+    color: var(--white);
+    display: flex;
+    text-decoration: none;
+    padding: 15px; /* Menambah padding untuk elemen */
+    border-radius: 8px; /* Rounded corners untuk elemen link */
+    transition: background 0.3s; /* Transisi latar belakang halus */
+}
+
+.navigation ul li:hover a {
+    background: rgba(255, 255, 255, 0.3); /* Warna latar belakang saat hover */
+}
+
+.navigation ul li a .icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Jarak antara ikon dan teks */
+}
+
+.navigation ul li a .icon ion-icon {
+    font-size: 1.5rem; /* Ukuran ikon lebih kecil untuk kesan elegan */
+    color: var(--white); /* Pastikan ikon memiliki warna yang kontras */
+}
+
+.navigation ul li a .tittle {
+    font-size: 1rem; /* Ukuran teks yang seimbang */
+    color: var(--white); /* Warna teks */
+    font-weight: 500; /* Berat font yang sedikit lebih tebal */
+}
+
+.navigation.active {
+    width: 100px; /* Ukuran saat navigasi aktif */
+}
+
+.navigation.active ul li a .tittle {
+    display: none; /* Menyembunyikan teks saat navigasi aktif */
+}
+
+.navigation ul li a span img {
+    width: 30px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(0deg)
+        brightness(100%) contrast(100%);
+}
+
+.navigation ul li:hover a span img {
+    filter: none;
+}
+
+/* Base Styling */
+.main {
+    position: absolute;
+    width: calc(100% - 250px);
+    left: 250px;
+    height: 100vh;
+    background: var(--white);
+    transition: width 0.4s ease, left 0.4s ease;
+}
+
+.main.active {
+    width: calc(100% - 100px);
+    left: 100px;
+}
+
+.topbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.detail {
+    padding: 0 20px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.toggle {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.search-admin {
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search-admin label {
+    position: relative;
+    width: 100%;
+}
+
+.search-admin label input {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    padding: 5px 20px 5px 40px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.user-profil {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.user-profil a button {
+    border: 1px solid #333;
+    padding: 8px 16px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.user-profil a button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.user-profil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Cards Styling */
+.cardBox {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 20px;
+}
+
+.cardBox .card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: var(--white);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.cardBox .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.cardBox .card .iconBox {
+    font-size: 50px;
+}
+
+.cardBox .card .numbers {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #333;
+}
+
+.cardBox .card .cardName {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th,
+table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+table tr:hover td {
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.recentOrders {
+    max-height: 800px;
+    overflow-y: auto;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cardHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.cardHeader h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.cardHeader .link {
+    background: transparent;
+    color: #333;
+    text-decoration: none;
+}
+
+.cardHeader .link:hover {
+    text-decoration: underline;
+}
+
+table tr td:last-child {
+    text-align: end;
+}
+
+table tr td:nth-last-child(2) {
+    text-align: start;
+}
+table tr th:last-child {
+    text-align: center;
+}
+
+table tr th :nth-last-child(2) {
+    text-align: start;
+}
+
+.aksi{
+    text-align: center;
+}
+
+/* Button Styling */
+.aksi-button {
+    padding: 8px 16px;
+    background-color: #333; /* Biru lembut untuk tampilan yang profesional */
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 0.85rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.25s ease, transform 0.2s ease;
+    margin: 0 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.aksi-button:hover {
+    background-color: #333; /* Biru lebih gelap saat di-hover */
+    transform: translateY(-2px); /* Efek hover angkat */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.aksi-button:active {
+    background-color: #555; /* Biru yang lebih gelap untuk klik */
+    transform: translateY(0); /* Efek turun saat ditekan */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: scale(0.7);
+        opacity: 0;
+    }
+}
+
+/* Close Button */
+
+/* Modal Header */
+.modal-content h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #333;
+    letter-spacing: 1px;
+}
+
+/* Form Labels */
+.modal-content label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+thead {
+    position: sticky;
+    top: -20px;
+    background-color: #fff;
+}
+
+tbody::-webkit-scrollbar {
+    display: none;
+}
+
+.modal {
+    display: none; /* Tersembunyi secara default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background hitam semi-transparan */
+}
+
+/* Modal Content */
+.modal-content {
+    background: linear-gradient(135deg, #fff, #f3f3f3);
+    margin: auto;
+    top: 10px;
+    padding: 40px;
+    border-radius: 20px;
+    width: 80%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    /* Deep shadow for depth */
+    animation: zoomIn 0.5s ease-in-out;
+    position: relative;
+}
+
+/* Tab Styles */
+.tab-menu {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    background: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.tab-button.active,
+.tab-button:hover {
+    background: #333;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.image-container img {
+    object-fit: contain;
+    width: 100px;
+    height: auto;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.modal-content form {
+    margin-top: 20px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="number"],
+.modal-content input[type="email"],
+.modal-content input[type="file"],
+.modal-content input[type="password"],
+.modal-content input[type="date"],
+.modal-content select,
+.modal-content textarea {
+    padding: 7px 15px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;
+}
+
+.submit-btn{
+    float:right;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #fff;
+    font-weight: 600;
+    border-radius: 7px;
+    border: 1px solid #333;
+    transition: .3s background ease-in-out;
+}
+
+.submit-btn:hover{
+    background: #333;
+    color: #fff;
+    transition: .3s background ease-in-out;
+}
+
+.modal-content input:focus {
+    border-color: #333;
+    outline: none;
+}
+
+.input-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.input-grup {
+    width: 49%;
+}
+
+.image-profile {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.image-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.edit-profile::after {
+    content: "\f303"; /* Kode untuk ikon pensil di Font Awesome */
+    font-family: "Font Awesome 5 Free"; /* Nama font untuk Font Awesome */
+    font-weight: 900; /* Pastikan ikon terlihat dengan benar */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Background transparan hitam */
+    color: #fff; /* Warna ikon */
+    opacity: 0; /* Awalnya tidak terlihat */
+    transition: opacity 0.3s; /* Efek transisi */
+    border-radius: 50%; /* Membuat overlay berbentuk lingkaran */
+}
+
+.edit-profile:hover::after {
+    opacity: 1; /* Tampilkan ikon saat di-hover */
+}
+
+@media (max-width: 768px) {
+    .navigation {
+        width: 250px;
+    }
+    .main {
+        width: calc(100% - 250px);
+        left: 250px;
+    }
+}
+
+/* Gaya umum untuk semua status */
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+/* Gaya khusus untuk setiap status */
+.status.dikerjakan {
+    background-color: #4caf50; /* Hijau */
+}
+
+.status.tertunda {
+    background-color: #ffc107; /* Kuning */
+}
+
+.status.dikirim {
+    background-color: #2196f3; /* Biru */
+}
+
+.status.dikembalikan {
+    background-color: #f44336; /* Merah */
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.pagination a{
+    color: #fff;
+}
+
+.page-item {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #333;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.page-item.active {
+    background: transparent;
+    border: 1px solid #333;
+    color: #333;
+}
+
+.page-item.disabled {
+    background-color: var(--black2);
+    cursor: not-allowed;
+}
+
+.page-item:hover {
+    background-color: #333;
+    color: #fff;
+}

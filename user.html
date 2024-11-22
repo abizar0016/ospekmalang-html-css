@@ -1,0 +1,1334 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ospek Malang</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8">
+
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.png" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="fonts/linearicons-v1.0.0/icon-font.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/mained.css">
+    <script src="js/sekerip.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--===============================================================================================-->
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-1AopBxYsml-S9bqk"></script>
+        
+</head>
+
+<body class="animsition">
+    <style>
+        /* Form Container */
+        .form-elegant {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .form-elegant:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Label */
+        .form-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Quantity Input */
+        .form-input {
+            width: 80px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+            color: #333;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: #717fe0;
+            box-shadow: 0 0 5px rgba(113, 127, 224, 0.5);
+            outline: none;
+        }
+
+        /* Submit Button */
+        .form-btn {
+            padding: 10px 20px;
+            background-color: #717fe0;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .form-btn:hover {
+            background-color: #575ed1;
+            transform: translateY(-2px);
+        }
+
+        .form-btn:active {
+            background-color: #444ab8;
+            transform: translateY(0);
+        }
+    </style>
+
+    <!-- Header -->
+    <header>
+    <div class="container-menu-desktop">
+        <div class="wrap-menu-desktop" style="top: 0;">
+            <nav class="limiter-menu-desktop container">
+                <!-- Logo desktop -->
+                <a href="#" class="logo">
+                    <img src="images/logo.png" alt="IMG-LOGO">
+                </a>
+
+                <!-- Menu desktop -->
+                <div class="menu-desktop">
+                    <ul class="main-menu">
+                        <li class="active-menu">
+                            <a href="user">Beranda</a>
+                        </li>
+                        <li>
+                            <a href="user#about">Tentang</a>
+                        </li>
+                        <li>
+                            <a href="user/product">Produk</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Icon header -->
+                <div class="wrap-icon-header flex-w flex-r-m">
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11">
+                        <form action="" class="search">
+                            <input type="search" placeholder="Cari..." class="search-input">
+                            <button type="submit" class="search-btn">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart"
+                        data-notify="0">
+                        <i class="zmdi zmdi-shopping-cart"></i>
+                    </div>
+
+                    <!-- Profile dropdown menu -->
+                    <div class="profile-image">
+                                                    <img src="images/default-profile.jpg" alt="Default Image">
+                                                <ul class="menu-profil">
+                            <a href="user/profile">
+                            <li class="profil-list">
+                                    <span class="tittle">Edit Profil</span>
+                                </li>
+                            </a>
+                            <a href="user/order">
+                            <li class="profil-list">
+                                    <span class="tittle">Pesanan</span>
+                                </li>
+                            </a>
+                                                                                    <a href="admin">
+                                <li class="profil-list">
+                                        <span>Panel Admin</span>
+                                    </li>
+                                </a>
+                                                                            <a href="#"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            <li class="profil-list">
+                                <form id="logout-form" action="logout" method="POST">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                </form>
+                                    <span class="tittle">Keluar</span>
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+    <!-- Cart -->
+    <div class="wrap-header-cart js-panel-cart">
+        <div class="s-full js-hide-cart"></div>
+
+        <div class="header-cart flex-col-l p-l-65 p-r-25">
+            <div class="header-cart-title flex-w flex-sb-m p-b-8">
+                <span class="mtext-103 cl2">
+                    Keranjang Anda
+                </span>
+
+                <div class="fs-35 lh-10 cl2 p-lr-5 pointer hov-cl1 trans-04 js-hide-cart">
+                    <i class="zmdi zmdi-close"></i>
+                </div>
+            </div>
+
+            <div class="header-cart-content flex-w js-pscroll">
+                <ul class="header-cart-wrapitem w-full">
+                                    </ul>
+
+                <div class="w-full">
+                    <div class="header-cart-total w-full p-tb-40">
+                        Total: Rp
+                        0
+                    </div>
+
+                    <div class="header-cart-buttons flex-w w-full">
+                        <a href="user/product"
+                            class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+                            Tambah
+                        </a>
+
+                        <a href="user/checkout"
+                            class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+                            Checkout
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Slider -->
+    <section class="section-slide">
+        <div class="wrap-slick1">
+            <div class="slick1">
+                <div class="item-slick1" style="background-image: url(images/bg-slide2.png)">
+                    <div class="container h-full">
+                        <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+                            <div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
+                                <span class="ltext-101 cl2 respon2">
+                                    Baju Hitam & Putih
+                                </span>
+                            </div>
+
+                            <div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+                                <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+                                    Baju Ospek
+                                </h2>
+                            </div>
+
+                            <div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
+                                <a href="user/product"
+                                    class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                                    Belanja Sekarang
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-slick1" style="background-image: url(images/bg-slide3.png);">
+                    <div class="container h-full">
+                        <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+                            <div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
+                                <span class="ltext-101 cl2 respon2">
+                                    Perlengkapan Ospek
+                                </span>
+                            </div>
+
+                            <div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn"
+                                data-delay="800">
+                                <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+                                    Sepatu & Dasi
+                                </h2>
+                            </div>
+
+                            <div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
+                                <a href="user/product"
+                                    class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                                    Belanja Sekarang
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item-slick1" style="background-image: url(images/bg-slide.png);">
+                    <div class="container h-full">
+                        <div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+                            <div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft"
+                                data-delay="0">
+                                <span class="ltext-101 cl2 respon2">
+                                    Aksesoris Lainnya
+                                </span>
+                            </div>
+
+                            <div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight"
+                                data-delay="800">
+                                <h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+                                    Ospek Lainnnya
+                                </h2>
+                            </div>
+
+                            <div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
+                                <a href="user/product"
+                                    class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+                                    Belanja Sekarang
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="bg0 p-t-75 p-b-120" id="about">
+        <div class="container">
+            <div class="row p-b-148">
+                <div class="col-md-7 col-lg-8">
+                    <div class="p-t-7 p-r-85 p-r-15-lg p-r-0-md">
+                        <h3 class="mtext-111 cl2 p-b-16">
+                            Cerita Kami
+                        </h3>
+
+                        Di Ospek Malang, kami memahami pentingnya memulai perjalanan kampus dengan semangat dan
+                        persiapan yang matang. Kami hadir menyediakan berbagai produk eksklusif untuk membantu Anda
+                        memulai ospek dengan gaya dan percaya diri. Sebagai destinasi utama mahasiswa baru, Ospek Malang
+                        menawarkan koleksi lengkap baju ospek, aksesori, dan perlengkapan berkualitas tinggi yang
+                        dibutuhkan untuk pengalaman ospek yang berkesan. Kami berkomitmen menyediakan produk berkualitas
+                        dengan standar tinggi, pengalaman belanja yang mudah melalui platform online yang user-friendly,
+                        serta dukungan pelanggan yang siap membantu. Kami juga mendukung komunitas mahasiswa dengan
+                        memastikan setiap pelanggan baru merasa diterima dan siap menghadapi tantangan awal mereka
+                        dengan perlengkapan yang penuh gaya.
+
+                    </div>
+                </div>
+
+                <div class="col-11 col-md-5 col-lg-4 m-lr-auto">
+                    <div class="hov-img0">
+                        <img src="images/foto-about-2.png" alt="IMG">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner -->
+    <div class="sec-banner bg0 p-t-80 p-b-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                    <!-- Block1 -->
+                    <div class="block1 wrap-pic-w">
+                        <img src="images/baju.png" alt="IMG-BANNER" style="height: 525px; width:390px">
+
+                        <a href="user/product"
+                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                            <div class="block1-txt-child1 flex-col-l">
+                                <span class="block1-name ltext-102 trans-04 p-b-8">
+                                    Baju
+                                </span>
+
+                                <span class="block1-info stext-102 trans-04">
+                                    Hitam Putih
+                                </span>
+                            </div>
+
+                            <div class="block1-txt-child2 p-b-4 trans-05">
+                                <div class="block1-link stext-101 cl0 trans-09">
+                                    Belanja Sekarang
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                    <!-- Block1 -->
+                    <div class="block1 wrap-pic-w">
+                        <img src="images/celana.png" alt="IMG-BANNER"
+                            style="height: 525px; width:390px">
+
+                        <a href="user/product"
+                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                            <div class="block1-txt-child1 flex-col-l">
+                                <span class="block1-name ltext-102 trans-04 p-b-8">
+                                    Celana
+                                </span>
+
+                                <span class="block1-info stext-102 trans-04">
+                                    Celana Hitam
+                                </span>
+                            </div>
+
+                            <div class="block1-txt-child2 p-b-4 trans-05">
+                                <div class="block1-link stext-101 cl0 trans-09">
+                                    Belanja Sekarang
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-xl-4 p-b-30 m-lr-auto">
+                    <!-- Block1 -->
+                    <div class="block1 wrap-pic-w">
+                        <img src="images/sabuk.png" alt="IMG-BANNER"
+                            style="height: 525px; width:390px">
+
+                        <a href="user/product"
+                            class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
+                            <div class="block1-txt-child1 flex-col-l">
+                                <span class="block1-name ltext-102 trans-04 p-b-8">
+                                    Aksesoris
+                                </span>
+
+                                <span class="block1-info stext-102 trans-04">
+                                    Perlengkapan
+                                </span>
+                            </div>
+
+                            <div class="block1-txt-child2 p-b-4 trans-05">
+                                <div class="block1-link stext-101 cl0 trans-09">
+                                    Belanja Sekarang
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Product -->
+    <section class="bg0 p-t-23 p-b-140 m-t-50">
+        <div class="container">
+            <!-- Product Grid -->
+
+            <div class="p-b-10">
+                <h3 class="ltext-103 cl5">
+                    Ringkasan Produk
+                </h3>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex-w flex-l-m filter-tope-group m-tb-10">
+                <button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 filter-button active" data-filter="*">
+                    Semua Produk
+                </button>
+                <div class="category-buttons">
+                                        <button class="filter-button stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5"
+                        data-filter="1">
+                        Baju
+                    </button>
+                                        <button class="filter-button stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5"
+                        data-filter="2">
+                        Celana
+                    </button>
+                                        <button class="filter-button stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5"
+                        data-filter="3">
+                        Sepatu
+                    </button>
+                                        <button class="filter-button stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5"
+                        data-filter="4">
+                        Lainnya
+                    </button>
+                                    </div>
+
+                <!-- <div class="flex-w flex-c-m m-tb-10">
+
+                    <div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
+                        <i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
+                        <i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
+                        Cari
+                    </div>
+                </div> -->
+
+                <!-- Search product -->
+                <!-- <div class="dis-none panel-search w-full p-t-10 p-b-15">
+                    <div class="bor8 dis-flex p-l-15">
+                        <button class="size-113 flex-c-m fs-16 cl2 hov-cl1 trans-04">
+                            <i class="zmdi zmdi-search"></i>
+                        </button>
+
+                        <form action="">
+                            <input class="mtext-107 cl2 size-114 plh2 p-r-15" type="text" name="search-product"
+                                placeholder="Search">
+                        </form>
+                    </div>
+                </div> -->
+            </div>
+
+
+
+            <div class="products-container mt-4">
+
+                                <div class="isotope-item 1 js-show-modal1"
+                    onclick="showModal(1)">
+                    <div class="block2">
+                        <div class="block2-pic hov-img0">
+                            <img src="images/1731897963_673aaa6b638a6.png" alt="IMG-PRODUCT">
+                        </div>
+                        <div class="block2-txt flex-w flex-t p-t-14">
+                            <div class="block2-txt-child1 flex-col-l">
+                                <a href="product-detail.html"
+                                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                    Baju Ospek
+                                </a>
+                                <span class="stext-105 cl3">
+                                    Rp. 68000
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="isotope-item 2 js-show-modal1"
+                    onclick="showModal(2)">
+                    <div class="block2">
+                        <div class="block2-pic hov-img0">
+                            <img src="images/1731898018_673aaaa24a519.png" alt="IMG-PRODUCT">
+                        </div>
+                        <div class="block2-txt flex-w flex-t p-t-14">
+                            <div class="block2-txt-child1 flex-col-l">
+                                <a href="product-detail.html"
+                                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                    Celana
+                                </a>
+                                <span class="stext-105 cl3">
+                                    Rp. 56000
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="isotope-item 3 js-show-modal1"
+                    onclick="showModal(3)">
+                    <div class="block2">
+                        <div class="block2-pic hov-img0">
+                            <img src="images/1731898061_673aaacd9d5e7.jpg" alt="IMG-PRODUCT">
+                        </div>
+                        <div class="block2-txt flex-w flex-t p-t-14">
+                            <div class="block2-txt-child1 flex-col-l">
+                                <a href="product-detail.html"
+                                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                    Sepatu
+                                </a>
+                                <span class="stext-105 cl3">
+                                    Rp. 50000
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="isotope-item 4 js-show-modal1"
+                    onclick="showModal(4)">
+                    <div class="block2">
+                        <div class="block2-pic hov-img0">
+                            <img src="images/1731898111_673aaaff08176.png" alt="IMG-PRODUCT">
+                        </div>
+                        <div class="block2-txt flex-w flex-t p-t-14">
+                            <div class="block2-txt-child1 flex-col-l">
+                                <a href="product-detail.html"
+                                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                    Sabuk
+                                </a>
+                                <span class="stext-105 cl3">
+                                    Rp. 10000
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                                <div class="isotope-item 4 js-show-modal1"
+                    onclick="showModal(5)">
+                    <div class="block2">
+                        <div class="block2-pic hov-img0">
+                            <img src="images/1731898156_673aab2c80210.png" alt="IMG-PRODUCT">
+                        </div>
+                        <div class="block2-txt flex-w flex-t p-t-14">
+                            <div class="block2-txt-child1 flex-col-l">
+                                <a href="product-detail.html"
+                                    class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
+                                    Dasi
+                                </a>
+                                <span class="stext-105 cl3">
+                                    Rp. 1000000
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                            </div>
+
+            <div class="flex-c-m flex-w w-full p-t-45">
+                <a href="user/product"
+                    class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
+                    Lainnya
+                </a>
+            </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg3 p-t-75 p-b-32">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0 p-b-30">
+                        Kategori
+                    </h4>
+
+                    <ul>
+                        <li class="p-b-10">
+                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+                                Baju
+                            </a>
+                        </li>
+
+                        <li class="p-b-10">
+                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+                                Celana
+                            </a>
+                        </li>
+
+                        <li class="p-b-10">
+                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+                                Sepatu
+                            </a>
+                        </li>
+
+                        <li class="p-b-10">
+                            <a href="#" class="stext-107 cl7 hov-cl1 trans-04">
+                                Aksesoris
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0 p-b-30">
+                        MENGHUBUNGI
+                    </h4>
+
+                    <p class="stext-107 cl7 size-201">
+                        Ada Pertanyaan? Jl. Danau Surubek, Jawa Timur, Indonesia or call us on (+62) 819-1627-0743
+                    </p>
+
+                </div>
+                <div class="col-sm-6 col-lg-3 p-b-50">
+                    <h4 class="stext-301 cl0 p-b-30">
+                        Buletin
+                    </h4>
+
+                    <form>
+                        <div class="wrap-input1 w-full p-b-4">
+                            <input class="input1 bg-none plh1 stext-107 cl7" type="text" name="email"
+                                placeholder="email@example.com">
+                            <div class="focus-input1 trans-04"></div>
+                        </div>
+
+                        <div class="p-t-18">
+                            <button class="flex-c-m stext-101 cl0 size-103 bg1 bor1 hov-btn2 p-lr-15 trans-04">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="p-t-40">
+
+                <p class="stext-107 cl6 txt-center">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    @ospekmalang
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+
+                </p>
+            </div>
+    </footer>
+
+
+    <!-- Back to top -->
+    <div class="btn-back-to-top" id="myBtn">
+        <span class="symbol-btn-back-to-top">
+            <i class="zmdi zmdi-chevron-up"></i>
+        </span>
+    </div>
+
+    <!-- Modal1 -->
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 modal-open"
+        id="modal-1">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731897963_673aaa6b638a6.png" alt="Image 1"
+                                onclick="changeImage('images/1731897963_673aaa6b638a6.png', 1)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731897963_673aaa6b653e3.png" alt="Image 2"
+                                onclick="changeImage('images/1731897963_673aaa6b653e3.png', 1)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731897963_673aaa6b656d8.png" alt="Image 3"
+                                onclick="changeImage('images/1731897963_673aaa6b656d8.png', 1)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731897963_673aaa6b638a6.png">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-1"
+                                        src="images/1731897963_673aaa6b638a6.png" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-1"
+                                        href="images/1731897963_673aaa6b638a6.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    Baju Ospek
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 68.000
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    Baju Ospek
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="1">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="10">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 "
+        id="modal-2">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731898018_673aaaa24a519.png" alt="Image 1"
+                                onclick="changeImage('images/1731898018_673aaaa24a519.png', 2)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898018_673aaaa24a997.png" alt="Image 2"
+                                onclick="changeImage('images/1731898018_673aaaa24a997.png', 2)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898018_673aaaa24ad98.png" alt="Image 3"
+                                onclick="changeImage('images/1731898018_673aaaa24ad98.png', 2)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731898018_673aaaa24a519.png">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-2"
+                                        src="images/1731898018_673aaaa24a519.png" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-2"
+                                        href="images/1731898018_673aaaa24a519.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    Celana
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 56.000
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    Celana Hitam
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="2">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="9">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 "
+        id="modal-3">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731898061_673aaacd9d5e7.jpg" alt="Image 1"
+                                onclick="changeImage('images/1731898061_673aaacd9d5e7.jpg', 3)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898061_673aaacd9d9b4.png" alt="Image 2"
+                                onclick="changeImage('images/1731898061_673aaacd9d9b4.png', 3)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898061_673aaacd9dcda.png" alt="Image 3"
+                                onclick="changeImage('images/1731898061_673aaacd9dcda.png', 3)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731898061_673aaacd9d5e7.jpg">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-3"
+                                        src="images/1731898061_673aaacd9d5e7.jpg" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-3"
+                                        href="images/1731898061_673aaacd9d5e7.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    Sepatu
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 50.000
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    Sepatu
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="3">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="9">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 "
+        id="modal-4">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731898111_673aaaff08176.png" alt="Image 1"
+                                onclick="changeImage('images/1731898111_673aaaff08176.png', 4)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898111_673aaaff08540.png" alt="Image 2"
+                                onclick="changeImage('images/1731898111_673aaaff08540.png', 4)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898111_673aaaff088f2.png" alt="Image 3"
+                                onclick="changeImage('images/1731898111_673aaaff088f2.png', 4)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731898111_673aaaff08176.png">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-4"
+                                        src="images/1731898111_673aaaff08176.png" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-4"
+                                        href="images/1731898111_673aaaff08176.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    Sabuk
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 10.000
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    Sabuk
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="4">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="9">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 "
+        id="modal-5">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731898156_673aab2c80210.png" alt="Image 1"
+                                onclick="changeImage('images/1731898156_673aab2c80210.png', 5)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898156_673aab2c805b6.png" alt="Image 2"
+                                onclick="changeImage('images/1731898156_673aab2c805b6.png', 5)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898156_673aab2c808a6.png" alt="Image 3"
+                                onclick="changeImage('images/1731898156_673aab2c808a6.png', 5)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731898156_673aab2c80210.png">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-5"
+                                        src="images/1731898156_673aab2c80210.png" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-5"
+                                        href="images/1731898156_673aab2c80210.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    Dasi
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 1.000.000
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    Dasi
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="5">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="999">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 "
+        id="modal-6">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731898225_673aab71af10c.png" alt="Image 1"
+                                onclick="changeImage('images/1731898225_673aab71af10c.png', 6)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898225_673aab71af4b0.png" alt="Image 2"
+                                onclick="changeImage('images/1731898225_673aab71af4b0.png', 6)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731898225_673aab71af7d6.png" alt="Image 3"
+                                onclick="changeImage('images/1731898225_673aab71af7d6.png', 6)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731898225_673aab71af10c.png">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-6"
+                                        src="images/1731898225_673aab71af10c.png" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-6"
+                                        href="images/1731898225_673aab71af10c.png">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    Baju Ospek + Dasi
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 89.000
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    Baju Ospek + Dasi
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="6">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="10">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <div class="wrap-modal1 js-modal1 p-t-60 p-b-20 "
+        id="modal-7">
+        <div class="overlay-modal1 js-hide-modal1"></div>
+        <div class="container">
+            <div class=" bg0 p-t-20 p-b-20 p-lr-15-lg how-pos3-parent">
+                <div class="product-container">
+                    <button class="how-pos3 hov3 trans-04 js-hide-modal1">
+                        <img src="images/icon-close.png" alt="CLOSE">
+                    </button>
+                    <!-- Modal content here -->
+                    <ul class="image-list">
+                        <li class="image-list-items">
+                            <img src="images/1731911077_673adda5ed16e.webp" alt="Image 1"
+                                onclick="changeImage('images/1731911077_673adda5ed16e.webp', 7)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731911077_673adda5ed689.jpg" alt="Image 2"
+                                onclick="changeImage('images/1731911077_673adda5ed689.jpg', 7)">
+                        </li>
+                        <li class="image-list-items">
+                            <img src="images/1731911077_673adda5ed986.jpg" alt="Image 3"
+                                onclick="changeImage('images/1731911077_673adda5ed986.jpg', 7)">
+                        </li>
+                    </ul>
+                    <div class="image-product">
+                        <div class="slick3 gallery-lb">
+                            <div class="item-slick3" data-thumb="images/1731911077_673adda5ed16e.webp">
+                                <div class="wrap-pic-w pos-relative">
+                                    <img id="mainProductImage-7"
+                                        src="images/1731911077_673adda5ed16e.webp" alt="IMG-PRODUCT">
+                                    <a id="mainProductLink-7"
+                                        href="images/1731911077_673adda5ed16e.webp">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-5 p-b-30">
+                        <form action="user/cart/add" id="cart-add" method="POST" class="form-elegant form-cart">
+                            <div class="p-r-50 p-t-5 p-lr-0-lg product-list">
+                                <h4 class="name-product" id="modal-product-name">
+                                    sepautu
+                                </h4>
+
+                                <span class="price-product">
+                                    Rp 89.896
+                                </span>
+
+                                <p class="description-product text-disabled" id="modal-product-description">
+                                    kaos kaki tahan lama, ga badeg
+                                </p>
+
+                                <div class="p-t-33">
+                                    <input type="hidden" name="_token" value="KjXarBVyyvT60pFe5jCWNfLrkiINdx7fjbRASzX8" autocomplete="off">                                    <input type="hidden" name="product_id" value="7">
+                                    <label for="quantity" class="form-label">Quantity:</label>
+                                    <input type="number" name="quantity" class="form-input" value="1" min="1" max="46">
+                                    <input type="submit" class="form-btn mt-3"></input>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+        <script>
+        $(".form-cart").on("submit", function(e) {
+            e.preventDefault(); // Mencegah form dikirim langsung
+            const form = $(this);
+
+            $.ajax({
+                url: form.attr("action"),
+                type: "POST",
+                data: form.serialize(),
+                success: function(response) {
+                    if (response.success) {
+                        swal({
+                            title: "Sukses!",
+                            text: response.message,
+                            icon: "success",
+                            timer: 1000,
+                            buttons: false,
+                        }).then(() => location.reload());
+                    } else {
+                        swal(
+                            "Error!",
+                            response.message || "Terjadi kesalahan.",
+                            "error"
+                        );
+                    }
+                },
+                error: function(xhr) {
+                    let errorMessage =
+                        xhr.responseJSON?.message || "Gagal menambahkan data.";
+                    swal("Error!", errorMessage, "error");
+                },
+            });
+        });
+    </script>
+</body>
+
+<!--===============================================================================================-->
+    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/animsition/js/animsition.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/bootstrap/js/popper.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/select2/select2.min.js"></script>
+    <script>
+        $(".js-select2").each(function() {
+            $(this).select2({
+                minimumResultsForSearch: 20,
+                dropdownParent: $(this).next('.dropDownSelect2')
+            });
+        })
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/daterangepicker/moment.min.js"></script>
+    <script src="vendor/daterangepicker/daterangepicker.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/slick/slick.min.js"></script>
+    <script src="js/slick-custom.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/parallax100/parallax100.js"></script>
+    <script>
+        $('.parallax100').parallax100();
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/MagnificPopup/jquery.magnific-popup.min.js"></script>
+    <script>
+        $('.gallery-lb').each(function() { // the containers for all your galleries
+            $(this).magnificPopup({
+                delegate: 'a', // the selector for gallery item
+                type: 'image',
+                gallery: {
+                    enabled: true
+                },
+                mainClass: 'mfp-fade'
+            });
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="vendor/sweetalert/sweetalert.min.js"></script>
+    <script>
+        // Menangani klik pada tombol tambah ke wishlist
+        $('.js-addwish-b2').each(function() {
+            var nameProduct = $(this).parent().parent().find('.js-name-b2').html();
+            $(this).on('click', function(e) {
+                e.preventDefault();
+                swal(nameProduct, "is added to wishlist!", "success");
+                $(this).addClass('js-addedwish-b2');
+                $(this).off('click');
+            });
+        });
+    
+        // Menangani klik pada tombol tambah ke wishlist di detail produk
+        $('.js-addwish-detail').each(function() {
+            var nameProduct = $(this).parent().parent().parent().find('.js-name-detail').html();
+            $(this).on('click', function() {
+                swal(nameProduct, "is added to wishlist!", "success");
+                $(this).addClass('js-addedwish-detail');
+                $(this).off('click');
+            });
+        });
+    
+        // Menangani klik pada tombol tambah ke keranjang
+        $('.js-addcart-detail').each(function() {
+            var nameProduct = $(this).closest('.product-list').find('.name-product').html();
+            $(this).on('click', function(e) {
+                e.preventDefault(); // Mencegah formulir dikirim langsung
+    
+                // Tampilkan SweetAlert
+                swal({
+                    title: nameProduct,
+                    text: "is added to cart!",
+                    icon: "success",
+                    button: "OK",
+                }).then(() => {
+                    // Kirim formulir setelah pengguna menekan tombol OK
+                    $(this).closest('form').submit();
+                });
+            });
+        });
+    </script>
+    
+    <!--===============================================================================================-->
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script>
+        $('.js-pscroll').each(function() {
+            $(this).css('position', 'relative');
+            $(this).css('overflow', 'hidden');
+            var ps = new PerfectScrollbar(this, {
+                wheelSpeed: 1,
+                scrollingThreshold: 1000,
+                wheelPropagation: false,
+            });
+
+            $(window).on('resize', function() {
+                ps.update();
+            })
+        });
+    </script>
+    <!--===============================================================================================-->
+    <script src="js/main.js"></script>
+    <script src="js/sekerip.js"></script>
+</body>
+
+</html>
